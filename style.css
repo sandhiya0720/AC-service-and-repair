@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+/* left logo */
+
+.logo{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 18px;
+    background-color:rgb(234, 234, 235);
+    font-family:monospace; 
+    font-weight:bold;
+    box-shadow: 0px 2px 2px 2px rgb(204, 199, 199);
+}
+/* style for nav bar */
+/* style for nav bar's items */
+.navbar-nav .nav-link{
+    transition: all 0.3s ease;
+}
+
+.navbar-collapse.show .nav-link{
+    animation: slideFade 0.4s ease forwards;
+}
+
+@keyframes slideFade{
+    from{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar {
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+}
+.navbar-nav .nav-link {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 5px;
+    color: black;
+    transition: color 1s ease;
+}
+.navbar-nav .nav-link:hover{
+    color: blue!important;
+    cursor: pointer;
+}
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    transition: width 1s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+    background-color: blue;
+}
+/* style for nav bar's button */
+.nav-btn{
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    word-spacing: 10px;
+    font-size: 15px;
+}
+
+.nav-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transform: scale(1.05);
+}
+/* hero page */
+.Home{
+    background-image: url("./image 13.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;              
+    align-items: flex-end;  
+    padding-bottom: 195px;
+}
+/* HERO CONTENT LEFT */
+.hero-content{
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+/* Heading */
+.hero-title{
+    font-size: 55px;
+    font-weight: 700;
+}
+
+/* Paragraph */
+.hero-text{
+    font-size: 23px;
+    margin-top: 15px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+/* Buttons */
+.hero-btn1{
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 15px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.hero-btn1:hover{
+    background-color: black;
+    color:white;
+}
+
+.hero-btn2{
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 15px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.hero-btn2:hover{
+    background-color: black;
+    color:white; 
+}
+/* ABOUT US STYLE */
+/* left content */
+.Left-con{
+    width: 50%;
+    padding-bottom: 30px;
+    position:relative;
+}
+.right-con{
+    width: 50%;
+}
+.text{
+    position: absolute;
+    bottom: 5px;   
+    left: 45px;     
+    width: 120px;
+    padding: 20px 10px;
+    text-align: center;
+    
+}
+.NUM{
+    font-size: 45px;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.years{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: start;
+}
+.photo1{
+  height: 570px;
+  width: 450px;
+  background-image:url("./tool.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 180px;
+  border-radius: 10px;
+  position: relative;
+}
+.photo2{
+  height: 400px;
+  width: 330px;
+  background-image:url("./inspector.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 250px;
+  top: 50px;
+  border-radius: 10px;
+  position: absolute;
+  border: 20px solid white;
+}
+/* right content */
+.line{
+    height: 4px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    display: inline-block;
+}
+.para{
+    font-size: 18px;
+}
+/* three boxes */
+.box{
+    height:350px;
+    width:180px;
+    background-color: #0d6efd;
+    border-radius: 100px;
+    border: 4px solid #5db4e6;
+}
+.box i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+/* style for what we do */
+.overall{
+    height: auto;
+    width: 100%;
+}
+.bx{
+    /* height: 340px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    justify-content: center;
+    gap: 70px;
+}
+.bxx{
+    height: 350px;
+    /* width: 200px; */
+    background-color: #0d6efd;
+    border-radius: 15px!important;
+    margin: 15px 0px 25px 0px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.bxx:hover{
+    cursor: pointer;
+}
+.ic{
+    bottom: 235px;
+    font-size: 150px;
+    left: 120px;
+    color: white;
+    position: absolute;
+    opacity: 0;
+}
+
+.bxx:hover .ic{
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 1s ease-in-out;
+}
+.icon{
+    font-size: 50px;
+}
+/* REVIEW */
+.com-box{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.b1{
+  height: 270px;
+  width: 500px;
+  position: relative;
+  background-image: linear-gradient(to right, white,rgb(69, 160, 245));
+  clip-path: path("M 20,0 L 480,0 A 20,20,0,0,1 500,20 L 500,180 A 20,20,0,0,1 480,200 L 320,200 A 20,20,0,0,0 300,220 L 300,250 A 20,20,0,0,1 280,270 L 20,270 A 20,20,0,0,1 0,250 L 0,20 A 20,20,0,0,1 20,0 Z");
+}
+.clip{
+    position:relative;
+}
+.name{
+    height: 70px;
+    width: 175px;
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+}
+.name2{
+    height: 70px;
+    width: 175px;
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+}
+.square{
+    background-color: rgb(223, 214, 214);
+    height: 55px;
+    width: 55px;
+    border-radius: 15px;
+}
+.b2{
+  height: 270px;
+  width: 400px;
+  position: relative;
+  background-color: rgb(69, 160, 245);
+  clip-path: path("M 20,0 L 380,0 A 20,20,0,0,1 400,20 L 400,180 A 20,20,0,0,1 380,200 L 240,200 A 20,20,0,0,0 220,220 L 220,250 A 20,20,0,0,1 200,270 L 20,270 A 20,20,0,0,1 0,250 L 0,20 A 20,20,0,0,1 20,0 Z");
+}
+/* Common style */
+.review-track{
+    display: flex;
+    gap: 50px;
+    width: max-content;
+}
+
+/* First row (Right → Left) */
+.scroll-left{
+    animation: scrollLeft 10s linear infinite;
+}
+
+/* Second row (Left → Right) */
+.scroll-right{
+    animation: scrollRight 10s linear infinite;
+}
+
+@keyframes scrollLeft{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.plan-common{
+    display: flex;
+    justify-content: center;
+    
+}
+.plan-card1{
+    height: 440px;
+    width: 300px;
+    background-color: rgb(239, 239, 243);
+    margin: 20px 0px;
+    border-radius: 20px;
+    box-shadow: 2px 0px 3px 1px grey;
+}
+.plan-card2{
+    height: 470px;
+    width: 300px;
+    color: white;
+    background-image: linear-gradient(rgb(16, 79, 138),rgb(14, 66, 114));
+    margin: 20px 0px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 2px 0px 3px 1px grey;
+    transform: scale(1.1);
+}
+.plan-card1 h3{
+    font-weight: bold;
+}
+.plan-card2 h3{
+    margin-top: 130px;
+}
+.ln{
+    text-decoration: line-through;
+    font-size: 25px;
+    font-weight: bold;
+}
+.rupees{
+    font-size: 45px;
+    font-weight: 700;
+}
+.ad i{
+    color: rgb(14, 66, 114);
+}
+.ad2 i{
+    color: white;
+}
+.ad, .ad2{
+    display: flex;
+    flex-direction: column;   
+    gap: 5px;                
+    margin-top: 20px;
+    padding-left: 65px;
+}
+.important{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    padding: 2px 9px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: rgb(69, 160, 245);
+}
+.sp{
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+   font-variation-settings:
+    "wdth" 100;
+}
+.button{
+    padding: 1px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #79a7ec;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 50px;
+}
+.button2{
+    padding: 1px 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 25px;
+    font-weight: 700; 
+    margin-left: 40px;
+}
+/* style for form */
+.image{
+    height: 350px;
+    width: 470px;
+    
+}
+.Contact{
+    height: 300px;
+    width: 350px;
+    margin: 10px 0px 0px 30px;
+}
+.bold{
+    font-weight: 500;
+}
+.fm{
+    max-width:650px;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgba(210, 226, 231, 0.568);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.25);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.simple-input{
+    width: 90%;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(210, 226, 231, 0.568);
+    font-size: 22px;
+    
+}
+.send-btn{
+    width: 90%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.send-btn:hover{
+    background-color: black;
+}
+/* footer */
+.footer{
+  background-color: #123a6f;
+  color: white;
+  padding: 60px 80px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-col{
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.logo-box{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-circle{
+  width: 90px;
+  height: 90px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.footer-col h4{
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-col ul{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li{
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.footer-col ul li a{
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover{
+  color: #8d97a0;
+}
+
+.social-icons a{
+  margin-right: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover{
+  color:  #8d97a0;
+}
+
+hr{
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin: 30px 0 15px;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 20px;
+}
+
+/* responsive for all */
+/* tab responsive */
+@media  only screen and (min-width: 601px) and (max-width: 699px){
+    .hero-title{
+        font-size: 45px;
+    }
+     .nav-btn{
+        display:none;
+    }
+    .Home{
+        padding-bottom: 170px;
+    }
+   .bx{
+   display: grid;
+   grid-template-columns: repeat(2, 200px);
+   gap: 40px;
+   justify-content: center;
+   justify-items: center;   
+   margin: 0 auto;          
+}
+.bxx{
+    width:200px;
+}
+  .common{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .common .box{
+    width: 180px;     
+    height: 350px;
+  }
+  .right-con{
+    width: 100%;
+}
+  .button2 {
+    margin-left: 20px;
+}
+  .navbar-collapse{
+    background-color: rgba(255, 255, 255, 0.603);  
+}
+
+   .image{
+      width: 470px;     
+      height: auto;
+      margin-left: 50px;
+   }
+
+   .Contact{
+      width: 260px;
+      text-align:left;
+    }
+   .send-btn{
+    width: 80%;
+   
+   }
+
+    .form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .text{
+    left: 0;
+  }
+
+ .fm {
+        width: 90%;
+        max-width: 550px;
+        margin: 0px auto;
+       
+        align-items: center;
+    
+    }
+  .image{
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .Contact{
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+  }
+  .simple-input{
+    max-width: 90%;
+  }
+   .footer-col .center{
+    text-align:center;
+   }
+   .social-icons{
+      display: flex;
+      justify-content: center;
+  }
+  .photo1{
+    left: 118px;
+  }
+  .plan-common{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.plan-card2{
+    transform: none;
+}
+.plan-card2 button{
+    margin-left: 35px;
+}
+ 
+
+}
+@media  only screen and (min-width: 700px) and (max-width: 999px){
+    .hero-title{
+        font-size: 45px;
+    }
+     .nav-btn{
+        display:none;
+    }
+    .Home{
+        padding-bottom: 170px;
+    }
+   .bx{
+   display: grid;
+   grid-template-columns: repeat(2, 200px);
+   gap: 40px;
+   justify-content: center;
+   justify-items: center;   
+   margin: 0 auto;          
+}
+.bxx{
+    width:200px;
+}
+  .common{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .common .box{
+    width: 180px;     
+    height: 350px;
+  }
+  .right-con{
+    width: 100%;
+}
+  .button2 {
+    margin-left: 20px;
+}
+  .navbar-collapse{
+    background-color: rgba(255, 255, 255, 0.603);  
+}
+
+   .image{
+      width: 470px;     
+      height: auto;
+      margin-left: 50px;
+   }
+
+   .Contact{
+      width: 260px;
+      text-align:left;
+    }
+   .send-btn{
+    width: 80%;
+    
+   }
+
+    .form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .text{
+    left: 0;
+  }
+
+ .fm {
+        width: 90%;
+        max-width: 550px;
+        margin: 0px auto;
+       
+    }
+  .image{
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .Contact{
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+  }
+  .simple-input{
+    max-width: 90%;
+  }
+  
+   .footer-col .center{
+    text-align:center;
+   }
+   .social-icons{
+      display: flex;
+      justify-content: center;
+  }
+  .photo1{
+    left: 118px;
+  }
+  .plan-common{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.plan-card2{
+    transform: none;
+}
+.plan-card2 button{
+    margin-left: 35px;
+}
+
+
+}
+
+/* mobile responsive */
+@media only screen and (min-width: 300px) and (max-width: 600px){
+
+    .navbar-nav .nav-link{
+        font-size: 18px;
+    }
+
+    .hero-title{
+        font-size: 35px;
+    }
+
+    .hero-text{
+        font-size: 18px;
+    }
+
+    .Home{
+        align-items: center;   
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .hero-content{
+        margin-left: 0;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-btn1,
+    .hero-btn2{
+        display: block;
+        margin: 12px auto;
+        width: 90%;
+    }
+    .nav-btn{
+        display:none;
+    }
+.common{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 25px;
+  }
+
+  .box{
+    margin: 0 auto;       
+  }
+   .navbar-collapse{
+    background-color: rgba(255, 255, 255, 0.603);  
+}
+
+    .right-con{
+    width: 100%;
+}
+.Left-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .photo1{
+    width: 300px;
+    height: 420px;
+    position: relative;
+    left: 0px;
+  }
+      .NUM {
+        font-size: 30px;
+    }
+      .photo2 {
+        width: 220px;
+        height: 280px;
+        position: absolute;
+        bottom: 20px;
+        right: 140px;
+        border: 15px solid white;
+    }
+   .text {
+        position: absolute;
+        bottom: 10px;
+        font-size: 15px;
+        left: 145px;
+        padding: 14px 0px;
+        color: white;
+    }
+.com-box{
+    width: 100%;
+}
+.bx{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+}
+.bxx{
+    width: 200px;
+}
+.plan-common{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .form{
+   flex-direction: column ; 
+ }
+ .fx{
+    width: 100%;
+ }
+ 
+  .b1{
+    width: 300px;
+    height: 240px;
+    font-size: 15px;
+    clip-path: path("M 15,0 L 285,0 A 15,15,0,0,1 300,15 L 300,160 A 15,15,0,0,1 285,175 L 200,175 A 15,15,0,0,0 185,190 L 185,220 A 15,15,0,0,1 170,240 L 15,240 A 15,15,0,0,1 0,220 L 0,15 A 15,15,0,0,1 15,0 Z");
+  }
+
+  .b2{
+    width: 260px;
+    height: 240px;
+    font-size: 15px;
+    clip-path: path("M 15,0 L 245,0 A 15,15,0,0,1 260,15 L 260,160 A 15,15,0,0,1 245,175 L 170,175 A 15,15,0,0,0 155,190 L 155,220 A 15,15,0,0,1 140,240 L 15,240 A 15,15,0,0,1 0,220 L 0,15 A 15,15,0,0,1 15,0 Z");
+  }
+   .name,
+  .name2{
+    display: none;
+  }
+
+         .square {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        position: relative;
+        top: 5px;
+        left: 80px;
+    }
+  .name h6,
+  .name2 h6{
+    font-size: 14px;
+    margin: 0;
+    display: none;
+  }
+  .review-track{
+    gap: 30px;
+  }
+
+  .scroll-left,
+  .scroll-right{
+    animation-duration: 15s;   
+  }
+ 
+ .form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;  
+}
+
+.fm{
+   width: 95%;
+   max-width: 320px;
+   margin: 0 auto 30px;
+}
+
+  .simple-input{
+    max-width: 80%;
+
+    font-size: 16px;
+  }
+
+ .send-btn {
+        width: 50%;
+    }
+  .image, .Contact{
+    display: none;
+  }
+  .plan-card2{
+    transform: none;
+}
+}
